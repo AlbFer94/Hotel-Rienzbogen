@@ -5,7 +5,6 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactsPage from "./pages/ContactsPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import AppNavbar from "./components/AppNavbar";
 
 function App() {
   return (

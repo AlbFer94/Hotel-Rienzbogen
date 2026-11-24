@@ -1,0 +1,321 @@
+/* src/styles/tokens.css */
+:root {
+    /* Colori · palette A, Cirmolo e bosco */
+    --color-bg: #f7f3ec;
+    /* sfondo della pagina */
+    --color-surface: #f1ede6;
+    /* riquadri, card */
+    --color-surface-strong: #ffffff;
+    /* card in rilievo, campi del form */
+    --color-text: #1c1c18;
+    --color-text-muted: #424843;
+    /* testo secondario */
+    --color-border: #c2c8c1;
+    --color-primary: #193325;
+    /* titoli, hover */
+    --color-primary-2: #2f4a3a;
+    /* pulsanti, bolle della chat */
+    --color-on-primary: #ffffff;
+    --color-accent: #81542e;
+    /* occhielli, accenti */
+    --color-accent-soft: #ffdcc3;
+    /* badge, callout */
+
+    /* Font */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    /* Scala del testo */
+    --text-hero: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+    /* 32 → 48 px */
+    --text-h2: 2rem;
+    /* 32 px */
+    --text-h3: 1.5rem;
+    /* 24 px */
+    --text-title: 1.125rem;
+    /* 18 px */
+    --text-body-lg: 1.125rem;
+    /* 18 px */
+    --text-body: 1rem;
+    /* 16 px */
+    --text-small: 0.875rem;
+    /* 14 px */
+    --text-label: 0.75rem;
+    /* 12 px, maiuscolo, letter-spacing 0.04em */
+
+    /* Spaziature */
+    --space-xs: 0.25rem;
+    /*  4 px */
+    --space-sm: 0.5rem;
+    /*  8 px */
+    --space-md: 1rem;
+    /* 16 px */
+    --space-lg: 2rem;
+    /* 32 px */
+    --space-xl: 4rem;
+    /* 64 px */
+    --gutter: 1.5rem;
+    /* margine laterale, 24 px */
+
+    /* Forme */
+    --radius-sm: 4px;
+    /* pulsanti, campi, badge */
+    --radius-md: 8px;
+    /* card, riquadri */
+    --shadow: 0 1px 8px rgb(0 0 0 / 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* src/styles/base.css */
+body {
+    font-family: var(--font-body);
+    /* DM Sans per tutto */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    /* Playfair Display solo qui */
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* --------Navbar---------------- */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--gutter);
+
+    /* Sfondo: --color-bg all'80% di opacità */
+    background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Ombra sotto l'header: --shadow */
+    box-shadow: var(--shadow);
+}
+
+/* Nome dell'hotel: --color-primary */
+.topnav .hotel-name {
+    order: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: var(--text-title);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: var(--space-xs) 0;
+}
+
+.topnav .nav-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+/* Link del menu: --color-text-muted */
+.topnav a,
+.topnav .nav-link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: var(--text-body);
+    padding: var(--space-sm) var(--space-md);
+    transition: color 0.2s ease;
+}
+
+/* Link al passaggio del mouse: --color-text */
+.topnav a:hover,
+.topnav .nav-link:hover {
+    color: var(--color-text);
+}
+
+/* Link della pagina attiva: --color-primary, sottolineato */
+.topnav a.active,
+.topnav .nav-link.active {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Evita sottolineatura attiva sul nome hotel */
+.topnav .hotel-name.active {
+    text-decoration: none;
+}
+
+/* Pulsante «Richiedi disponibilità»: --color-primary-2 con testo --color-on-primary */
+.topnav .btn-cta,
+.btn-cta {
+    background-color: var(--color-primary-2);
+    color: var(--color-on-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    border: none;
+    font-size: var(--text-small);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.topnav .btn-cta:hover,
+.btn-cta:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    text-decoration: none;
+}
+
+.topnav .btn-cta.active {
+    color: var(--color-on-primary);
+    text-decoration: none;
+}
+
+/* Contenitore azioni a destra (lingue + hamburger) */
+.topnav .topnav-actions {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-left: auto;
+}
+
+/* Selettore lingua (segmented pill secondo best practice) */
+.topnav .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    background-color: color-mix(in srgb, var(--color-text) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    border-radius: 9999px;
+    padding: 2px;
+    gap: 2px;
+}
+
+.topnav .lang-switch button {
+    border: none;
+    background: transparent;
+    padding: 3px 7px;
+    border-radius: 9999px;
+    font-size: var(--text-label);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    line-height: 1.2;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.topnav .lang-switch button:hover {
+    color: var(--color-text);
+}
+
+.topnav .lang-switch button.active {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+/* Icona Hamburger */
+.topnav button.icon,
+.topnav a.icon {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Menu links container */
+.topnav .nav-menu {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+/* Responsive behavior: Desktop (>= 769px) */
+@media screen and (min-width: 769px) {
+    .topnav .nav-menu {
+        order: 2;
+        margin-left: auto;
+        margin-right: var(--space-md);
+    }
+
+    .topnav .topnav-actions {
+        order: 3;
+        margin-left: 0;
+    }
+
+    .topnav button.icon,
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+/* Responsive behavior: Mobile (<= 768px) */
+@media screen and (max-width: 768px) {
+    .topnav .hotel-name {
+        font-size: 1.05rem;
+    }
+
+    .topnav button.icon,
+    .topnav a.icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topnav .nav-menu.closed,
+    .topnav .closed {
+        display: none;
+    }
+
+    .topnav .nav-menu.opened,
+    .topnav .opened,
+    .topnav .opend {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: var(--space-md);
+        margin-top: var(--space-sm);
+        border-top: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+        gap: var(--space-xs);
+    }
+
+    .topnav .nav-menu.opened .nav-link,
+    .topnav .opened .nav-link {
+        padding: var(--space-sm) 0;
+        font-size: var(--text-title);
+    }
+
+    .topnav .nav-menu.opened .btn-cta,
+    .topnav .opened .btn-cta {
+        margin-top: var(--space-sm);
+        width: 100%;
+        text-align: center;
+        padding: var(--space-sm) var(--space-md);
+    }
+}
