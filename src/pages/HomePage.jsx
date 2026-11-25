@@ -4,6 +4,7 @@ function HomePage() {
         <div>
             <h1>Wellcome to the Hotel Rienzbogen</h1>
 
+
         </div>
     )
 }

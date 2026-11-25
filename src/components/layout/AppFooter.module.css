@@ -1,0 +1,89 @@
+/* src/components/layout/AppFooter.module.css */
+
+.footer {
+    width: 100%;
+    background-color: var(--color-surface);
+    border-top: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    color: var(--color-text);
+    padding: var(--space-xl) 0 var(--space-lg);
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: var(--text-title);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.columnTitle {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: var(--text-title);
+    font-weight: 600;
+}
+
+.text {
+    color: var(--color-text-muted);
+    font-size: var(--text-small);
+    line-height: 1.6;
+}
+
+.link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+    color: var(--color-text-muted);
+    font-size: var(--text-label);
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .bottomBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+}
