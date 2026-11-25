@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Segreti: la chiave OpenRouter vive solo qui (tappa 5)
+.env
+.env.*
+!.env.example

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import LogoSymbol from "./LogoSymbol";
+import "./AppNavbar.css";
 
 function AppNavbar() {
     const [isOpen, setIsOpen] = useState(false);

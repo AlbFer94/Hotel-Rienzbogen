@@ -1,0 +1,25 @@
+/* src/styles/base.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    /* DM Sans per tutto */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    /* Playfair Display solo qui */
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
