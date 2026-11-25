@@ -5,17 +5,20 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactsPage from "./pages/ContactsPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" Component={HomePage} />
-        <Route path="/about" Component={AboutPage} />
-        <Route path="/rooms" Component={RoomsPage} />
-        <Route path="/services" Component={ServicesPage} />
-        <Route path="/contacts" Component={ContactsPage} />
-        <Route path="*" Component={NotFoundPage} />
+        <Route Component={Layout}>
+          <Route path="/" Component={HomePage} />
+          <Route path="/about" Component={AboutPage} />
+          <Route path="/rooms" Component={RoomsPage} />
+          <Route path="/services" Component={ServicesPage} />
+          <Route path="/contacts" Component={ContactsPage} />
+          <Route path="*" Component={NotFoundPage} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
