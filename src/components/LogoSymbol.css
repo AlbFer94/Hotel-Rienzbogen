@@ -1,0 +1,26 @@
+/* src/components/LogoSymbol/LogoSymbol.css */
+.logo-symbol {
+    --logo-wood: var(--color-accent);
+    /* legno: arco e fiume */
+    --logo-green: var(--color-primary);
+    /* verde: montagne e rametto */
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo-symbol--inverse {
+    --logo-wood: var(--color-accent-soft);
+    --logo-green: var(--color-bg);
+}
+
+.logo-symbol__wood-line {
+    stroke: var(--logo-wood);
+}
+
+.logo-symbol__wood-fill {
+    fill: var(--logo-wood);
+}
+
+.logo-symbol__green-line {
+    stroke: var(--logo-green);
+}

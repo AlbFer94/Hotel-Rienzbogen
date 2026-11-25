@@ -1,8 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
-  <rect width="100" height="100" rx="22" fill="#f7f3ec" />
-  <path d="M 24,80 L 24,46 A 26,26 0 0,1 76,46 L 76,80" stroke="#81542e" stroke-width="5" stroke-linecap="round" fill="none" />
-  <polyline points="28,50 46,32 60,46 70,36 78,48" stroke="#193325" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  <path d="M 24,78 C 45,78 40,67 58,64 C 70,62 74,64 76,65" stroke="#81542e" stroke-width="5" stroke-linecap="round" fill="none" />
-  <path d="M 58,68 Q 67,64 76,73" stroke="#193325" stroke-width="2.5" stroke-linecap="round" fill="none" />
-  <circle cx="74" cy="73" r="3" fill="#193325" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115" width="100%" height="100%" fill="none">
+  <rect width="100" height="115" rx="20" fill="#f7f3ec" />
+  <polyline
+    points="21,63 42,33 56,49 68,38 79,52"
+    stroke="#193325"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 18,78 V 42 A 32,32 0 0 1 82,42 V 58 H 60"
+    stroke="#81542e"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 60,58
+       C 42,58 34,70 44,78
+       C 54,86 48,93 18,93
+       L 18,102
+       C 48,102 66,90 56,80
+       C 48,72 54,66 72,66
+       L 82,66
+       V 58
+       H 60
+       Z"
+    fill="#81542e"
+  />
 </svg>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
+import LogoSymbol from "./LogoSymbol";
 
 function AppNavbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ function AppNavbar() {
     return (
         <header className="topnav">
             <NavLink to="/" className="hotel-name" end onClick={closeMenu}>
-                <img src="/hotel-rienzbogen-logo.jpg" alt="Hotel Rienzbogen Logo" className="nav-logo" />
+                <LogoSymbol height={38} />
                 <span>Hotel <br></br> Rienzbogen</span>
             </NavLink>
 
