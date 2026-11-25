@@ -1,4 +1,3 @@
-import AppNavbar from "@/components/layout/AppNavbar";
 
 function AboutPage() {
     return (
