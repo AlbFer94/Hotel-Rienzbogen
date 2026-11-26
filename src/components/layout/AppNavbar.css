@@ -144,8 +144,7 @@
 }
 
 /* Icona Hamburger */
-.topnav button.icon,
-.topnav a.icon {
+.topnav button.icon {
     display: none;
     background: transparent;
     border: none;
@@ -203,7 +202,7 @@
 
     .topnav .nav-menu.opened,
     .topnav .opened,
-    .topnav .opend {
+    .topnav .opened {
         display: flex;
         flex-direction: column;
         width: 100%;

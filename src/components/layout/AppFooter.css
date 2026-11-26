@@ -1,6 +1,6 @@
-/* src/components/layout/AppFooter.module.css */
+/* src/components/layout/AppFooter.css */
 
-.footer {
+.app-footer {
     width: 100%;
     background-color: var(--color-surface);
     border-top: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
@@ -9,13 +9,13 @@
     margin-top: auto;
 }
 
-.container {
+.app-footer .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--gutter);
 }
 
-.grid {
+.app-footer .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
@@ -23,13 +23,13 @@
     border-bottom: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
 }
 
-.column {
+.app-footer .column {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
 }
 
-.brand {
+.app-footer .brand {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
@@ -40,31 +40,31 @@
     text-decoration: none;
 }
 
-.columnTitle {
+.app-footer .column-title {
     color: var(--color-primary);
     font-family: var(--font-display);
     font-size: var(--text-title);
     font-weight: 600;
 }
 
-.text {
+.app-footer .text {
     color: var(--color-text-muted);
     font-size: var(--text-small);
     line-height: 1.6;
 }
 
-.link {
+.app-footer .link {
     color: var(--color-text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.link:hover {
+.app-footer .link:hover {
     color: var(--color-primary);
     text-decoration: underline;
 }
 
-.bottomBar {
+.app-footer .bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,12 +76,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .grid {
+    .app-footer .grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
     }
 
-    .bottomBar {
+    .app-footer .bottom-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--space-xs);
