@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import LogoSymbol from "./LogoSymbol";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./AppNavbar.css";
 
 function AppNavbar() {
@@ -40,6 +41,8 @@ function AppNavbar() {
                         </button>
                     ))}
                 </div>
+
+                {console.log(lang)}
 
                 <button
                     type="button"
